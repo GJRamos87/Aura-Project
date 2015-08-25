@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-sm-3 col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+      <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+      <li><a href="/offers/new">Create Offer</a></li>
+  <!--     <li><%= link_to "Import CSV", @offer, method: :csv_import, data: { confirm: "Are you sure you want to import?" } %></li> -->
+    </ul>
+  </div>
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header"> 
+    <% if current_user.firstname %> 
+    Welcome
+    <span class="coolBlue">
+    <%= current_user.firstname + " " + current_user.lastname %>
+    <% else %> 
+      Welcome to Aura
+    <% end %>
+
+    </span></h1>
+
+    <div class="row placeholders">
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <h4>Last Accessed</h4>
+        <span class="text-muted">Date - <%= current_user.last_sign_in_at %></span>
+      </div>
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <h4>Your Email Address is</h4>
+        <span class="text-muted"><%= current_user.email %></span>
+      </div>
+      <div class="col-xs-6 col-sm-3 placeholder">
+        <h4>IP Address</h4>
+        <span class="text-muted"><%= current_user.current_sign_in_ip %></span>
+      </div>
+    </div>
+
+    <h3 class="sub-header">Notifications</h3>
+    <div class="table-responsive">
+      <div class="row">
+        <div class="col-md-12"
+
+        <p class="coolBlue" id="notice"><%= notice %> <%= alert %></p>
+
+        <h1>Offer Listing</h1>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Offer Name</th>
+              <th>Category</th>
+              <th>Offer Description</th>
+              <th>Price</th>
+              <th>Active</th>
+              <th>Operations</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @offers.each do |offer| %>
+            <tr>
+              <td><%= link_to offer.offer_title, offer_path(offer) %></td>
+              <td><%= offer.category %></td>
+              <td><%= offer.offer_description %></td>
+              <td>$<%= offer.price %></td>
+              <td><%= offer.active %></td>
+              <td><%= link_to "Edit", edit_offer_path(offer) %> | <%= link_to "Delete", offer, method: :delete, data: { confirm: "Are you sure you want to delete?" } %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <br>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+
+
+

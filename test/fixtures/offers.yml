@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offer_title: MyString
+  description: MyString
+  price: MyString
+  active: MyString
+
+two:
+  offer_title: MyString
+  description: MyString
+  price: MyString
+  active: MyString

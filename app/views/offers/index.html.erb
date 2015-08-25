@@ -1,0 +1,15 @@
+<div class="top-buffer"></div>
+<% @offers.each do |offer| %>
+  <div class="col-sm-6 col-md-4 pull-left">
+    <div class="thumbnail">
+      <img src="<%= offer.offerimage %>" alt="...">
+      <div class="caption">
+        <h3><%= offer.offer_title %></h3>
+        <p><%= offer.offer_description %><br>
+        <%= offer.price %></p>
+        <p><a href="/offers/<%= offer.id %>" class="btn btn-primary" role="button">Button</a> 
+        <p>Active: <%= offer.active %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

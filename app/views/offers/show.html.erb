@@ -1,0 +1,16 @@
+  <div class="col-md-6 col-md-offset-3">
+    <h1><%= @offers.offer_title %></h1>
+    <div class="thumbnail">
+      <img src="<%= @offers.offerimage %>" alt="...">
+      <div class="caption">
+        <h3><%= @offers.offer_title %></h3>
+        <p><%= @offers.offer_description %><br>
+        <%= @offers.price %></p>
+        <p>Active: <%= @offers.active %></p>
+        <p><a href="/offers/<%= @offers.id %>/edit" class="btn btn-primary" role="button">Edit</a> 
+        <%= link_to "Delete", @offers, method: :delete, data: { confirm: "Are you sure you want to delete #{@offers.offer_title}?" }, class: 'btn btn-danger' %>
+      </div>
+    </div>
+  </div>
+
+

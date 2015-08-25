@@ -1,0 +1,15 @@
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <h1>New Offer</h1>
+	<%= simple_form_for @offers do |f| %>
+	  <%= f.input :offer_title, required: true , class: 'form-control' %>
+	  <%= f.input :category, as: :select , :collection => ['Vacation','Flight','Cruise','Tour'], class: 'form-control' %>
+	  <%= f.input :offer_description , class: 'form-control' %>
+	  <%= f.input :price, required: true , class: 'form-control' %>
+	  <%= f.input :active, as: :select , required: true, :collection => ['Yes','No'], class: 'form-control' %>
+	  <%= f.input :offerimage , inline_label: 'Please upload Offer Image Here', class: 'form-control' %>
+	  <%= f.button :submit, class: 'top-buffer btn btn-primary' %>
+	<% end %>
+  </div>
+</div>
