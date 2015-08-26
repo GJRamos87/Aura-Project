@@ -3,14 +3,14 @@
     <h2><span class="white">Log in</h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field form-group">
-        <%= f.email_field :email, autofocus: true , class: 'white form-control', placeholder: 'Email'%>
+        <%= f.email_field :email, autofocus: true , class: 'form-control', placeholder: 'Email'%>
       </div>
 
       <div class="field form-group">
         <%= f.password_field :password, autocomplete: "off",class: 'form-control', placeholder: 'Password'  %>
       </div>
 
-      <% if devise_mapping.rememberable? -%>
+      <% if devise_mapping.rememberable? %>
         <div class="field">
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me , class: 'white' %>
