@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-5">
+  <div class="col-md-6 col-md-offset-3">
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -7,7 +7,7 @@
 
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
+      <%= f.email_field :email, autofocus: true,class: 'form-control'%>
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -17,32 +17,32 @@
 
     <div class="field">
       <%= f.label :First_Name %><br />
-      <%= f.text_field :firstname %>
+      <%= f.text_field :firstname,class: 'form-control' %>
     </div>
 
     <div class="field">
       <%= f.label :Last_Name %><br />
-      <%= f.text_field :lastname %>
+      <%= f.text_field :lastname,class: 'form-control'%>
     </div>
 
 
     <div class="field">
       <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off",class: 'form-control' %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off",class: 'form-control'%>
     </div>
 
     <div class="field">
       <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-      <%= f.password_field :current_password, autocomplete: "off" %>
+      <%= f.password_field :current_password, autocomplete: "off",class: 'form-control' %>
     </div>
 
     <div class="actions">
-      <%= f.submit "Update" %>
+      <%= f.submit "Update",class: "top-buffer btn btn-primary"  %>
     </div>
     <% end %>
 

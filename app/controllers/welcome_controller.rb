@@ -4,4 +4,12 @@ class WelcomeController < ApplicationController
     @users = User.all
     @offers = Offer.all
   end
+
+
+  def json
+  	@offers = Offer.all
+		render json: @offers
+  end
+
+
 end

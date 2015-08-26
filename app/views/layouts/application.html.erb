@@ -24,10 +24,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Dashboard</a></li>
-            <li><a href="/offers">Offers</a></li>
-            <li><%= link_to "About", welcome_about_path %></li>
-            <li><a href="/users/edit">Edit Profile</a></li>
+            <li><%= nav_link 'Dashboard', root_path %></li>
+            <li><%= nav_link 'Offer', offers_path %></li>
+            <li><%= nav_link "About", welcome_about_path %></li>
+            <li><%= nav_link "Edit Profile", edit_user_registration_path %></li>
             <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, data: { confirm: "Are you sure you want to Sign Out?" } %></li>
           </ul>
           <form class="navbar-form navbar-right">
