@@ -22,7 +22,7 @@
     <div class="row placeholders">
       <div class="col-xs-6 col-sm-3 placeholder">
         <h4>Last Accessed</h4>
-        <span class="text-muted">Date - <%= current_user.last_sign_in_at %></span>
+        <span class="text-muted">Date - <%= current_user.last_sign_in_at.in_time_zone('Eastern Time (US & Canada)') %></span>
       </div>
       <div class="col-xs-6 col-sm-3 placeholder">
         <h4>Your Email Address is</h4>
