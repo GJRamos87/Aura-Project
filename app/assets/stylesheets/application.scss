@@ -148,6 +148,57 @@ body {
 
 
 
+html,body {
+  height:100%;
+    background:center no-repeat fixed url('/assets/example/bg_suburb.jpg');
+    background-size: cover;
+}
+
+.icon-bar {
+  background-color:#fff;
+}
+
+section {
+  padding-top:70px;  
+    padding-bottom:50px; 
+    min-height:calc(100% - 1px);
+}
+
+.v-center {
+    padding-top:10%;
+    font-size:70px;
+}
+  
+.well {
+  border-color:transparent;
+}
+
+a.list-group-item.active,[class*='-info'] {
+  background-color: #168ccc;
+    color:#fff;
+}
+  
+#section1 {
+  background-color: #168ccc;
+    color:#dedeff;
+}
+  
+#section2 {
+  background-color: #e5e5ef;
+    color:#686868;
+}
+  
+#section3 {
+  background-color: #168ccc;
+    color:#ddd;
+}
+
+#section4 {
+  background-color: #fff;
+    color:#444;
+}
+
+
 
 
 

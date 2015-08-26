@@ -1,0 +1,64 @@
+
+<section class="container-fluid" id="section2">
+  <div class="row">
+  	<div class="col-sm-8 col-sm-offset-2 text-center">
+        <h1>What is Aura?</h1>
+        <br>
+		<p class="lead">Aura is a rails application that can be used as a content management system for travel offer storage. The idea is the improve upon my current companies offer management system. </p>
+        <br> 
+      	<i style="font-size:120px" class="fa fa-code fa-5x"></i>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid" id="section3">
+	<h1 class="text-center">The future is bright.</h1>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h3 class="text-center">Pretty Interface - Improved Perfomance - Awesome!</h3>
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-1">If you need a scalable management system for all inventory you can use Aura for those tasks.</div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-4 text-right">Aura is still a baby and will take time to grow. Hope fully it will import data via CSV very soon!</div>
+        </div>
+        <p class="text-center">
+          <i style="font-size:120px" class="fa fa-thumbs-up fa-5x"></i>
+        </p>
+      </div>
+   </div>
+</section>
+
+<section class="container-fluid" id="section4">
+	<h2 class="text-center">Thank you Bobby Tables and Vincent for passing on the Rails!</h2>
+    <div class="row">
+      <p class="text-center">
+      	<i style="font-size:120px" class="fa fa-train fa-5x"></i>
+      </p>
+      <div class="top-buffer"></div>
+      <p class="text-center"><%= link_to "Developed by George", "http://www.gjrdev.com" %></p>
+    </div>
+</section>
+
+<script type="text/javascript">
+	/* activate scrollspy menu */
+$('body').scrollspy({
+  target: '#navbar-collapsible',
+  offset: 50
+});
+
+/* smooth scrolling sections */
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 1000);
+        return false;
+      }
+    }
+});
+
+
+</script>
